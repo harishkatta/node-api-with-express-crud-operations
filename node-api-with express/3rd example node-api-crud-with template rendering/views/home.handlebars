@@ -1,0 +1,20 @@
+<h1>Example App: Members Home</h1>
+{{title}}
+<h4>Members</h4>
+<form action='/api/members' method="POST">
+    <div>
+        <label for='name'>Name</label>
+        <input type="text" name='name'>
+    </div>
+    <div>
+        <label for='email'>Email</label>
+        <input type="email" name='email'>
+    </div>
+    <button>Save</button>
+</form>
+<ul>
+    {{#each members}}
+    <li>{{this.name}} : {{this.email}} : {{this.status}}</li>
+    {{/each}}
+</ul>
+<a href="/api/members/">Visit API</a>
